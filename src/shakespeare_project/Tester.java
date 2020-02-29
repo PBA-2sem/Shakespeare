@@ -29,21 +29,24 @@ public class Tester {
             for (String w : words) {
                 count += w.length();
             }
-            System.out.println("avg " +  (count / (long) words.length));
+            System.out.println("avg " + (count / (long) words.length));
 
+            
             // MergeSort
-            String[] copyMergeSort = words;
+            String[] copyMergeSort = words.clone();
             long before = System.currentTimeMillis();
             MergeSort.mergeSort(copyMergeSort, 0, copyMergeSort.length - 1);
             long after = System.currentTimeMillis();
             System.out.println("MERGESORT execution time: " + (after - before) + " ms");
-
+            
             // QuickSort
-            String[] copyQuickSort = words;
+            String[] copyQuickSort = words.clone();
             long before1 = System.currentTimeMillis();
             QuickSort.quickSort(copyQuickSort, 0, copyQuickSort.length - 1);
             long after1 = System.currentTimeMillis();
             System.out.println("QUICKSORT execution time: " + (after1 - before1) + " ms");
+
+
 
         } catch (IOException ex) {
             ex.printStackTrace();

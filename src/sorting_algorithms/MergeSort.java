@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package sorting_algorithms;
 
 /**
@@ -21,7 +16,7 @@ public class MergeSort {
         merge(array, low, mid, high);
     }
 
-    public static void merge(String[] array, int low, int mid, int high) {
+    private static void merge(String[] array, int low, int mid, int high) {
         // Creating temporary subarrays
         String leftArray[] = new String[mid - low + 1];
         String rightArray[] = new String[high - mid];
