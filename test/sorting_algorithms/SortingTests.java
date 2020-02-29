@@ -67,10 +67,10 @@ public class SortingTests {
     public void testInsertionSort() {
 //        String[] wordsCopy = words.clone();
         long before = System.currentTimeMillis();
-        String[] test = Arrays.copyOfRange(words.clone(), 0, 100000);
+        String[] test = Arrays.copyOfRange(words.clone(), 0, 10000);
         InsertionSort.sort(test);
         long after = System.currentTimeMillis();
-        System.out.println("INSERTIONSORT (10000) execution time: " + (after - before) + " ms");
+        System.out.println("INSERTIONSORT execution time: " + (after - before) + " ms  ** OBS! ONLY 10k of (930k) elements");
         assertTrue(this.isSorted(test));
     }
 
