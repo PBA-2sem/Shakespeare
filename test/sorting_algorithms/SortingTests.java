@@ -67,11 +67,24 @@ public class SortingTests {
     public void testInsertionSort() {
 //        String[] wordsCopy = words.clone();
         long before = System.currentTimeMillis();
-        String[] test = Arrays.copyOfRange(words.clone(), 0, 10000);
+        String[] test = Arrays.copyOfRange(words.clone(), 0, 20000);
         InsertionSort.sort(test);
         long after = System.currentTimeMillis();
         System.out.println("INSERTIONSORT execution time: " + (after - before) + " ms  ** OBS! ONLY 10k of (930k) elements");
         assertTrue(this.isSorted(test));
+    }
+    
+    /**
+     * Test of QuickSort
+     */
+    @Test
+    public void testSelectionSort() {
+        String[] wordsCopy = Arrays.copyOfRange(words.clone(), 0, 20000);
+        long before = System.currentTimeMillis();
+        SelectionSort.sort(wordsCopy);
+        long after = System.currentTimeMillis();
+        System.out.println("SELECTIONSORT execution time: " + (after - before) + " ms ** OBS! ONLY 10k of (930k) elements");
+        assertTrue(this.isSorted(wordsCopy));
     }
 
     private boolean isSorted(Comparable[] array) {
