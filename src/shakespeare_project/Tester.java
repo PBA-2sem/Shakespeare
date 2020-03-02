@@ -8,6 +8,7 @@ package shakespeare_project;
 import java.io.IOException;
 import sorting_algorithms.MergeSort;
 import sorting_algorithms.QuickSort;
+import sorting_algorithms.TrieSort;
 import utilities.FileUtility;
 
 /**
@@ -46,7 +47,11 @@ public class Tester {
             long after1 = System.currentTimeMillis();
             System.out.println("QUICKSORT execution time: " + (after1 - before1) + " ms");
 
-
+            // TrieSort
+            String[] hey = {"b", "c", "a"};
+            TrieSort ts = new TrieSort();
+            ts.sort(hey);
+            System.out.println(hey);
 
         } catch (IOException ex) {
             ex.printStackTrace();
