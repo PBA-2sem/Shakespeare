@@ -10,16 +10,21 @@ import java.util.*;
 public class TrieSort {
 
     private Node rootNode;
+    private int count;
+    private String[] sortedArray;
 
     public TrieSort() {
         rootNode = null;
     }
     
-    public void sort(String[] array) {
+    public String[] sort(String[] array) {
+        sortedArray = new String[array.length];
+        count = 0;
         for (int i = 0; i < array.length; i++) {
             insert(array[i], i);
         }
         traversePreorder(array);
+        return sortedArray;
     }
 
     // function to insert 
@@ -56,15 +61,15 @@ public class TrieSort {
 
     // function for preorder 
     // traversal of trie 
-    private void traversePreorder(Node node,
-            String[] array) {
+    private void traversePreorder(Node node, String[] array) {
         if (node == null) {
             return;
         }
 
         if (node.getIndices().size() > 0) {
             for (int index : node.getIndices()) {
-                System.out.print(array[index] + " ");
+                sortedArray[count++] = array[index];
+                // System.out.print(array[index] + " ");
             }
         }
 

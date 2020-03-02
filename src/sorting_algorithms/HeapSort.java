@@ -7,7 +7,7 @@ package sorting_algorithms;
 
 public class HeapSort 
 { 
-    public void sort(String arr[]) 
+    public static void sort(String arr[]) 
     { 
         int n = arr.length; 
   
@@ -30,7 +30,7 @@ public class HeapSort
   
     // To heapify a subtree rooted with node i which is 
     // an index in arr[]. n is size of heap 
-    void heapify(String arr[], int n, int i) 
+    static void heapify(String arr[], int n, int i) 
     { 
         int largest = i;  // Initialize largest as root 
         int l = 2*i + 1;  // left = 2*i + 1 
