@@ -9,7 +9,7 @@ Executing SortingTests.java that demo's our Triesort, Mergesort, Selectionsort, 
 Note that SelectionSort and Insertionsort results are for the sorting of a subset of words (20k of 930k), as they are very slow. They are included this way to show that they actually work.
 
 Screenshot from IDE:
-![Screenshot](sortingtests.png)
+![Screenshot](sortingtest.png)
 
 Results:
 ````
