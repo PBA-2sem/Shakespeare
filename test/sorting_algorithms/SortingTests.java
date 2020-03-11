@@ -73,7 +73,7 @@ public class SortingTests {
         System.out.println("INSERTIONSORT execution time: " + (after - before) + " ms  ** OBS! ONLY 20k of (930k) elements");
         assertTrue(this.isSorted(test));
     }
-    
+
     /**
      * Test of QuickSort
      */
@@ -86,25 +86,27 @@ public class SortingTests {
         System.out.println("SELECTIONSORT execution time: " + (after - before) + " ms ** OBS! ONLY 20k of (930k) elements");
         assertTrue(this.isSorted(wordsCopy));
     }
-    
+
     @Test
     public void testHeapSort() {
-        String[] wordsCopy = Arrays.copyOfRange(words.clone(), 0, 20000);
+        String[] wordsCopy = words.clone();
         long before = System.currentTimeMillis();
         HeapSort.sort(wordsCopy);
         long after = System.currentTimeMillis();
-        System.out.println("HEAPSORT execution time: " + (after - before) + " ms ** OBS! ONLY 20k of (930k) elements");
+        System.out.println("HEAPSORT execution time: " + (after - before) + " ms");
+//        System.out.println("HEAPSORT execution time: " + (after - before) + " ms ** OBS! ONLY 20k of (930k) elements");
         assertTrue(this.isSorted(wordsCopy));
     }
-    
+
     @Test
     public void testTrieSort() {
-        String[] wordsCopy = Arrays.copyOfRange(words.clone(), 0, 20000);
+        String[] wordsCopy = words.clone();
         TrieSort ts = new TrieSort();
         long before = System.currentTimeMillis();
         String[] wordsSorted = ts.sort(wordsCopy);
         long after = System.currentTimeMillis();
-        System.out.println("TRIESORT execution time: " + (after - before) + " ms ** OBS! ONLY 20k of (930k) elements");
+        System.out.println("TRIESORT execution time: " + (after - before) + " ms");
+//        System.out.println("TRIESORT execution time: " + (after - before) + " ms ** OBS! ONLY 20k of (930k) elements");
         assertTrue(this.isSorted(wordsSorted));
     }
 

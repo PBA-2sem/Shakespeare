@@ -6,7 +6,7 @@ https://datsoftlyngby.github.io/soft2020spring/resources/d34f80c6-01-miniproject
 
 Executing SortingTests.java that demo's our Triesort, Mergesort, Selectionsort, Heapsort, Insertionsort and Quicksort algorithms, when used to sort Shakespeare’s complete works.
 
-Note that Triesort, SelectionSort, Heapsort and Insertionsort results are for the sorting of a subset of words (20k of 930k), as they are very slow. They are included this way to show that they actually work.
+Note that SelectionSort and Insertionsort results are for the sorting of a subset of words (20k of 930k), as they are very slow. They are included this way to show that they actually work.
 
 Screenshot from IDE:
 ![Screenshot](sortingtests.png)
@@ -14,12 +14,12 @@ Screenshot from IDE:
 Results:
 ````
 WORDCOUNT :930778
-TRIESORT execution time: 15 ms ** OBS! ONLY 20k of (930k) elements
-MERGESORT execution time: 536 ms
-SELECTIONSORT execution time: 2392 ms ** OBS! ONLY 20k of (930k) elements
-HEAPSORT execution time: 12 ms ** OBS! ONLY 20k of (930k) elements
-INSERTIONSORT execution time: 488 ms  ** OBS! ONLY 20k of (930k) elements
-QUICKSORT execution time: 997 ms
+TRIESORT execution time: 185 ms
+MERGESORT execution time: 516 ms
+SELECTIONSORT execution time: 2208 ms ** OBS! ONLY 20k of (930k) elements
+HEAPSORT execution time: 1024 ms
+INSERTIONSORT execution time: 423 ms  ** OBS! ONLY 20k of (930k) elements
+QUICKSORT execution time: 902 ms
 ````
 
 
